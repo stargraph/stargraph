@@ -54,6 +54,7 @@ routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
 sg:cytoscape@0.0.1
+sg:data-manage@0.0.1
 sg:layouts@0.0.1
 sg:pub-sec@0.0.1
 sha@1.0.3

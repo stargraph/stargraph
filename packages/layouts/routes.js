@@ -1,7 +1,7 @@
 Router.configure({
   layoutTemplate: 'layout',
-  loadingTemplate: 'loading',  // need to create or add package
-  notFoundTemplate: 'notfound' // need to create
+  //loadingTemplate: 'loading',  // need to create or add package
+  //notFoundTemplate: 'notfound' // need to create
 });
 
 Router.route('/', {

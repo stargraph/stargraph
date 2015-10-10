@@ -1,0 +1,30 @@
+<template name="datamanage">
+    <div class="info-well well">
+        <a href="#" id="closeDataManage" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+        {{> metadata}}
+        {{> annotations}}
+        {{> tags}}
+        {{> comments}}
+    </div>
+</template>
+
+<template name="metadata">
+    <h2>This will be metadata</h2>
+</template>
+
+<template name="annotations">
+    <h2>This will be annotations</h2>
+</template>
+
+<template name="tags">
+    <h2>This will be tags</h2>
+</template>
+
+<template name="comments">
+    {{> newComment}} <br />
+    <h2>this will be comments</h2>
+</template>
+
+<template name="newComment">
+    <h2>this will be where new comment form is</h2>
+</template>
