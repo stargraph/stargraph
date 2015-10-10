@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use('mongo');
   api.addFiles('collections.js');
-  api.addFiles(['publications.js','methods.js','security.js'],'server');
+  api.addFiles(['publications.js','security.js'],'server');
   api.export(['Graphs', 'Network']);
 });
 
