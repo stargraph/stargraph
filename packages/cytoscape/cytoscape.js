@@ -1,49 +1,42 @@
 Template.Cytoscape.rendered = function() {
     var self = this;
     //Static initial options for now;
-    options = Blaze.getData().options || {};
+    var options = Blaze.getData().options || {};
     var mergedOptions = _.defaults(options,{
         container: self.$('.cytoscape')[0],
         layout: {
-            name: 'grid'
+            name: 'null'
         }
     });
     self.graph = cytoscape(mergedOptions);
-    this.autorun(function(comp) {
-        var dataCtx = Blaze.getData().data || Blaze.getData();
-        var dataMapped = _.map(dataCtx.fetch(), function(ctx) {
-            _.defaults(ctx, {
-                data: {
-                    id: ctx._id
-                }
-            });
-            return ctx;
-        });
-        if (comp.firstRun) {
-            self.graph.add(dataMapped);
+    this.fieldFunctionMap = {
+        'data':function(elem, data){
+            elem.data(data);
+        },
+        'position':function(elem, data){
+            elem.position(data);
         }
-        else {
-            var collection = self.graph.collection("*");
-            var collectionSize = collection.size();
-            var collectionData = collection.jsons();
-            var dataCount = dataCtx.count();
-            if (collectionSize > dataCount) {
-                for (var i = 0; i < collectionSize; i++) {
-                    var ctx = collectionData[i];
-                    if (dataCtx.collection.findOne(ctx.data.id) === undefined) {
-                        self.graph.remove("#" + ctx.data.id);
-                    }
+    }
+    this.observe = Blaze.getData().data.observeChanges({
+        'added':function(id, fields){
+            fields.data = fields.data || {};
+            fields.data.id = id;
+            self.graph.add(fields);
+        },
+        'changed':function(id, fields){
+            var item = self.graph.getElementById(id)
+            for(var field in fields){
+                var f = self.fieldFunctionMap[field];
+                if(_.isFunction(f)){
+                    f(item, fields[field]);
                 }
             }
-            else if (collectionSize < dataCount) {
-                for (var i = 0; i < dataCount; i++) {
-                    var existing = self.graph.getElementById(dataMapped[i].data.id);
-                    if (existing.length === 0) {
-                        self.graph.add(dataMapped[i]);
-                    }
-                }
-            }
+        },
+        'removed':function(id){
+            self.graph.getElementById(id).remove();
         }
-        self.graph.elements().layout(mergedOptions.layout);
     });
 }
+Template.Cytoscape.onDestroyed(function(){
+    this.observe.stop();
+})
