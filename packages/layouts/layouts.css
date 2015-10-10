@@ -96,12 +96,14 @@ body {
   padding: 15px;
 }
 
-#toolbox{
-  height: 40px;
-  bottom:0%;
-  width:100%;
-  z-index: 2100;
-  background-color: rgba(0, 169, 255, 0.84) !important;
+.toolbox-well {
+    bottom:0%;
+    width:100%;
+    height:100%;
+    visibility: visible;
+    position: relative;
+    z-index: 2500;
+    background-color: rgba(0, 169, 255, 0.84) !important;
 }
 
 #home {
@@ -115,7 +117,7 @@ body {
   color: #E3DEDA;
 }
 
-#toolbox-toggle {
+.toolbox-toggle {
     visibility: hidden;
     position: relative;
 }
