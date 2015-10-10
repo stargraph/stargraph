@@ -12,7 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['templating', 'maxkfranz:cytoscape','underscore'],'client');
+  api.use(['templating', 'maxkfranz:cytoscape@2.4.8','underscore'],'client');
   api.addFiles(['cytoscape.html','cytoscape.js'],'client');
 });
 
