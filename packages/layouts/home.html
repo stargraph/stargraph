@@ -1,5 +1,5 @@
 <template name="home">
-	<div class="container">
+	<div class="container add-padding">
 	    {{#if currentUser}}
 	    <div class="row add-padding div-align">
     		<h2 class="tagline color-white">My Graphs</h2>
@@ -21,7 +21,7 @@
     			{{#each public}}
     			  {{>graphPublic}}
     			{{/each}}
-					{{#if public.length}}
+					{{#if graphs.length}}
     			{{else}}
 						No graphs yet
     			{{/if}}
