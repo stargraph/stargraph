@@ -1,13 +1,16 @@
-Template.Cytoscape.rendered = function(options) {
+Template.Cytoscape.rendered = function() {
     var self = this;
-    self.graph = cytoscape({
+    //Static initial options for now;
+    options = Blaze.getData().options || {};
+    var mergedOptions = _.defaults({
         container: self.$('.cytoscape')[0],
         layout:{
             name:'grid'
         }
-    });
+    }, options);
+    self.graph = cytoscape(mergedOptions);
     this.autorun(function(comp){
-        var dataCtx = Blaze.getData();
+        var dataCtx = Blaze.getData().data || Blaze.getData();
         var dataMapped = _.map(dataCtx.fetch(), function(ctx){
             _.defaults(ctx, {
                data:{
@@ -40,7 +43,7 @@ Template.Cytoscape.rendered = function(options) {
             }
 
         }
-        self.graph.elements().layout({ name: 'grid' });
+        self.graph.elements().layout(mergedOptions.layout);
 
     });
 }
