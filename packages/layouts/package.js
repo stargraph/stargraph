@@ -12,8 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['twbs:bootstrap@3.3.5','fortawesome:fontawesome@4.4.0','iron:router@1.0.9','templating','jquery']);
-  api.addFiles(['layouts.html','layouts.css','header.html','home.html','main.html','toolbar.html','toolbox.html','graphbox.html','layouts.js','toolbar.js','toolbox.js','routes.js',],'client');
+  api.use(['twbs:bootstrap@3.3.5','accounts-password','accounts-base','fortawesome:fontawesome@4.4.0','iron:router@1.0.9','templating','jquery','sg:cytoscape']);
+  api.addFiles(['layouts.html','layouts.css','header.html','header.js','home.html','home.js','main.html','toolbar.html','toolbox.html','graphbox.html','graphbox.js','graphbox.css','layouts.js','toolbar.js','toolbox.js','routes.js',],'client');
   api.addFiles(['stargraph_40.png','stardust.png'],'client', {isAsset:true});
 });
 

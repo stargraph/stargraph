@@ -1,5 +1,7 @@
 <template name="graphbox">
     <div id="graphbox">
-        <span> Graphbox: Where the CytoscapeJS Graph is to be rendered?</span>
+        {{#with cytodata}}
+            {{>Cytoscape options=options data=this}}
+        {{/with}}
     </div>
 </template>

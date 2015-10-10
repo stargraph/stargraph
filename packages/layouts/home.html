@@ -2,15 +2,31 @@
 	<div class="container">
 	    {{#if currentUser}}
 	    <div class="row add-padding div-align text-center">
-    		<h3 class="text-align-center color-white">My Graphs</h3>
+    		<h2 class="tagline text-align-center color-white">My Graphs</h2>
     			{{#each graphs}}
-    			<h4><a href="graph/{{_id}}">{{title}}</a></h4>
+    			  {{>graph}}
     			{{/each}}
     	</div>
       {{else}}
         <div class="div-align text-center">
-            <h2 class="tagline">Real-Time, Collaborative Graph Editor</h2>
+            <h2 class="tagline text-align-center color-white">Real-Time, Collaborative Graph Editor</h2>
         </div>
-      {{/if}} 
+      {{/if}}
+      <div class="row add-padding div-align text-center">
+    		<h2 class="tagline text-align-center color-white">Public Graphs</h2>
+    			{{#each public}}
+    			  {{>graphPublic}}
+    			{{/each}}
+    	</div>
     </div>
+</template>
+<template name="graph">
+  <h4><a href="{{pathFor 'main'}}">{{#if title}}{{title}}{{else}}Untitled - {{_id}}{{/if}}</a>
+  <a href="{{pathFor 'main'}}" class="btn btn-default editGraph"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+  <button class="btn makePublic {{#if public}}btn-danger{{else}}btn-success{{/if}}"><i class="glyphicon {{#if public}}glyphicon-eye-close{{else}}glyphicon-eye-open{{/if}}"></i> Make {{#if public}}private{{else}}public{{/if}}</button>
+  <button class="btn btn-danger deleteGraph"><i class="glyphicon glyphicon-remove"></i></button>
+  </h4>
+</template>
+<template name="graphPublic">
+  <h4><a href="{{pathFor 'main'}}">{{#if title}}{{title}}{{else}}Untitled - {{_id}}{{/if}}</a></h4>
 </template>

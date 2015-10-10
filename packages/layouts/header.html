@@ -9,18 +9,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://stargraph.xyz"><img class="brand" src="/packages/sg_layouts/stargraph_40.png" alt="Stargraph.xyz" /></a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}"><img class="brand" src="/packages/sg_layouts/stargraph_40.png" alt="Stargraph.xyz" /></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         {{#if currentUser}}
-        <li><a href="#" id="newGraph">+ New Graph</a></li>
+        <li><a href="#" class="addGraph">+ New Graph</a></li>
         {{/if}}
         <li><a href="https://twitter.com/soupala"> <i class="fa fa-twitter"></i> Twitter</a></li>
         <li><a href="https://github.com/Soupala/Stargraph"> <i class="fa fa-github"></i> Github</a></li>
         <li><a href="https://www.facebook.com/stargraph.xyz"> <i class="fa fa-facebook"></i> Facebook</a></li>
-        <!-- {{> loginButtons}} -->
+        {{> loginButtons}}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
