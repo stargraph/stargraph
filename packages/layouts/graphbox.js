@@ -40,11 +40,13 @@ function addNewNodeBinding( cy ){
     var tapOnBg = event.cyTarget === cy;
 
     if( tapOnBg ) {
-      Network.insert( {
-        group: 'nodes',
-        graphId: Router.current().params._id,
-        tags: []
-      } );
+        Network.insert({
+            group: 'nodes',
+            data:{},
+            position:{x:100,y:100},
+            graphId:Router.current().params._id,
+            tags:[]
+        });
     } else {
       Network.remove( event.cyTarget.id() );
     }
