@@ -1,10 +1,11 @@
 body {
-  background-image: url('/packages/sg_layouts/stardust.png');
+  /*background-image: url('/packages/sg_layouts/stardust.png');*/
   background-color: #000;
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
+  color: #aaa;
 }
 
 .text-center {
@@ -18,6 +19,7 @@ body {
 
 .navbar-inverse {
   background-color: rgba(0,0,0,.5) !important;
+  z-index: 9999;
 }
 
 .container-edge {
@@ -26,13 +28,12 @@ body {
 
 #toolbar {
   z-index: 1998;
-  border-top: 2px solid rgba(0, 169, 255, 0.25) !important;
-  border-bottom: 2px solid rgba(0, 169, 255, 0.25) !important;
-  background-color: rgba(0, 169, 255, 0.02) !important;
-  height: 58px; 
+  background-color: rgba( 0, 0, 0, 0.666 );
+  border-top: 1px solid #000;
+  height: 58px;
   padding-top: 10px;
   padding-bottom: 10px;
-  position: fixed !important; 
+  position: fixed !important;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;
@@ -41,7 +42,7 @@ body {
   bottom:0px !important;
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width: 914px) {
   .hide-mobile {
     visibility: hidden;
@@ -52,7 +53,7 @@ body {
   }
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width: 420px) {
   #toolbar {
     height: 68px;
@@ -72,12 +73,15 @@ body {
 }
 
 #graphbox {
-  width: 100%;
-  height:100%;
-  position: absolute;
-  border: 3px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  /*border: 3px solid red;*/
 }
-  
+
 #databox{
   visibility: hidden;
   position: relative;
@@ -95,7 +99,7 @@ body {
 #toolbox{
   height: 40px;
   bottom:0%;
-  width:100%; 
+  width:100%;
   z-index: 2100;
   background-color: rgba(0, 169, 255, 0.84) !important;
 }

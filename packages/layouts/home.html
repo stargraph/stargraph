@@ -1,22 +1,30 @@
 <template name="home">
 	<div class="container">
 	    {{#if currentUser}}
-	    <div class="row add-padding div-align text-center">
-    		<h2 class="tagline text-align-center color-white">My Graphs</h2>
+	    <div class="row add-padding div-align">
+    		<h2 class="tagline color-white">My Graphs</h2>
     			{{#each graphs}}
     			  {{>graph}}
     			{{/each}}
+					{{#if graphs.length}}
+    			{{else}}
+						No graphs yet
+    			{{/if}}
     	</div>
       {{else}}
-        <div class="div-align text-center">
-            <h2 class="tagline text-align-center color-white">Real-Time, Collaborative Graph Editor</h2>
+        <div class="div-align">
+            <h2 class="tagline color-white">Real-Time, Collaborative Graph Editor</h2>
         </div>
       {{/if}}
-      <div class="row add-padding div-align text-center">
-    		<h2 class="tagline text-align-center color-white">Public Graphs</h2>
+      <div class="row add-padding div-align">
+    		<h2 class="tagline color-white">Public Graphs</h2>
     			{{#each public}}
     			  {{>graphPublic}}
     			{{/each}}
+					{{#if public.length}}
+    			{{else}}
+						No graphs yet
+    			{{/if}}
     	</div>
     </div>
 </template>
