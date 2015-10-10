@@ -1,7 +1,7 @@
 <template name="graphbox">
     <div id="graphbox">
         {{#with cytodata}}
-            {{>Cytoscape options=options data=this}}
+            {{>Cytoscape options=options data=this collection=collection}}
         {{/with}}
     </div>
 </template>

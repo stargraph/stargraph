@@ -148,5 +148,8 @@ Template.graphbox.helpers( {
         addBindings( cy );
       }
     }
+  },
+  'collection':function(){
+    return Network;
   }
 } );
