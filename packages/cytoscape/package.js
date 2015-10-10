@@ -12,7 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.addFiles('cytoscape.js');
+  api.use(['templating', 'maxkfranz:cytoscape','underscore'],'client');
+  api.addFiles(['cytoscape.html','cytoscape.js'],'client');
 });
 
 Package.onTest(function(api) {
