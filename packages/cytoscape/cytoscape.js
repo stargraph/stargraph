@@ -33,6 +33,7 @@ Template.Cytoscape.rendered = function(options) {
                 var cd = cData[c];
                 if(dataCollection.findOne(cd.data._id) === undefined){
                     self.graph.elements().remove("#"+cd.data._id);
+                    self.graph.forceRender();
                 }
             }
         }
