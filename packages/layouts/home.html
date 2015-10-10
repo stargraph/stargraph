@@ -1,0 +1,16 @@
+<template name="home">
+	<div class="container">
+	    {{#if currentUser}}
+	    <div class="row add-padding div-align text-center">
+    		<h3 class="text-align-center color-white">My Graphs</h3>
+    			{{#each graphs}}
+    			<h4><a href="graph/{{_id}}">{{title}}</a></h4>
+    			{{/each}}
+    	</div>
+      {{else}}
+        <div class="div-align text-center">
+            <h2 class="tagline">Real-Time, Collaborative Graph Editor</h2>
+        </div>
+      {{/if}} 
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<template name="toolbar">
+    
+    <div id="toolbox-toggle">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {{> toolbox}}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Feel free to change icon UI for accomidating whatever we come up with ... they're Font Awesome icons -->
+    
+    <div>
+        <div id="toolbar" class="row">
+            <div class="div-align text-center col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 squeeze-mobile-height">
+               <a href="#" id="open-toolbox"><i class="fa fa-ellipsis-h fa-2x"></i><span class="hide-mobile"> More</span></a>
+            </div>
+            <div class="div-align text-center col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 squeeze-mobile-height">
+                <a href="#" id="open-search"><i class="fa fa-search fa-2x"></i><span class="hide-mobile"> Search</span></a>
+            </div>
+            <div class="div-align text-center col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 squeeze-mobile-height">
+                <a href="#" id="open-calc"><i class="fa fa-calculator fa-2x"></i><span class="hide-mobile"> Computations</span></a>
+            </div>
+            <div class="div-align text-center col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 squeeze-mobile-height">
+                <a href="#" id="add-node"><i class="fa fa-plus fa-2x"></i><span class="hide-mobile"> Node</span></a>
+            </div>
+        </div>
+    </div>
+</template>

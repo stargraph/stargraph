@@ -1,0 +1,122 @@
+body {
+  background-image: url('/packages/sg_layouts/stardust.png');
+  background-color: #000;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.div-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-inverse {
+  background-color: rgba(0,0,0,.5) !important;
+}
+
+.container-edge {
+  width:100% !important;
+}
+
+#toolbar {
+  z-index: 1998;
+  border-top: 2px solid rgba(0, 169, 255, 0.25) !important;
+  border-bottom: 2px solid rgba(0, 169, 255, 0.25) !important;
+  background-color: rgba(0, 169, 255, 0.02) !important;
+  height: 58px; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  color: #f10;
+  width:100% !important;
+  bottom:0px !important;
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 914px) {
+  .hide-mobile {
+    visibility: hidden;
+  }
+  .squeeze-mobile-height {
+    font-size: 1.36em;
+    height: 64px;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 420px) {
+  #toolbar {
+    height: 68px;
+  }
+  #home {
+    width:100%;
+    min-height: 350px;
+  }
+}
+
+
+@media only screen and (min-width : 915px) {
+  .hide-mobile {
+    visibility: visible;
+    font-size: 1.84em;
+  }
+}
+
+#graphbox {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  border: 3px solid red;
+}
+  
+#databox{
+  visibility: hidden;
+  position: relative;
+  z-index: 2200;
+  background-color: rgba(0, 169, 255, 0.84) !important;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  width: 80%;
+  min-height: 350px;
+  padding: 15px;
+}
+
+#toolbox{
+  height: 40px;
+  bottom:0%;
+  width:100%; 
+  z-index: 2100;
+  background-color: rgba(0, 169, 255, 0.84) !important;
+}
+
+#home {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  width: 80%;
+  min-height: 350px;
+  padding: 15px;
+}
+
+.tagline {
+  color: #bbb1a7;
+}
+
+#toolbox-toggle {
+    visibility: hidden;
+    position: relative;
+}
+
+#metadata-toggle {
+    visibility: hidden;
+    position: relative;
+}
