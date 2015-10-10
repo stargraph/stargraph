@@ -2,12 +2,12 @@ Template.Cytoscape.rendered = function() {
     var self = this;
     //Static initial options for now;
     options = Blaze.getData().options || {};
-    var mergedOptions = _.defaults({
+    var mergedOptions = _.defaults(options,{
         container: self.$('.cytoscape')[0],
         layout: {
             name: 'grid'
         }
-    }, options);
+    });
     self.graph = cytoscape(mergedOptions);
     this.autorun(function(comp) {
         var dataCtx = Blaze.getData().data || Blaze.getData();
