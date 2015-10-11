@@ -5,12 +5,12 @@
 Stargraph is a real-time, collaborative graph editor written in Meteor with the CytoscapeJS library.
 
 ## Demo
-[Stargraph.xyz](http://stargraph.xyz)
+We will put up shortly on [Stargraph.xyz](http://stargraph.xyz)
 
 ## Installation
 ```
 1. Install Meteor from https://www.meteor.com/install
-2. Choose the 'semi-stable' branch from the dropdown above, or check out that remote branch from your terminal.
+2. Get the 'semi-stable' branch.  'master' has a couple bugs that prevent the graph from rendering.
 3. $ cd stargraph
 4. $ meteor
 ```
@@ -19,7 +19,6 @@ Stargraph is a real-time, collaborative graph editor written in Meteor with the 
 2. In the context of Stargraph app, a graph (aka "network") consists of nodes (aka "vertices") and edges. Edges represent connections or relationships between nodes. Some common examples of nodes in a network include neurons, proteins, messages, planets, computers, routers, employees, work of arts, transportation vessels, computers, electrical substations, weather stations, and so forth.
 3. The initial focus of Stargraph is to fine tune techniques for rendering large datasets in collaborative, real-time network editors.
 4. Another goal is to continue developing and improving tools for sharing, collaboration, and organization of data, and make it easier for non-programmers explore data.
-
 
 ## User Feedback / Feature Requests / Planning
 - To see brainstorming/scratchpad, visit this [Hackpad](https://hackpad.com/IuJZ25PTfaT).
@@ -33,4 +32,3 @@ Stargraph is a real-time, collaborative graph editor written in Meteor with the 
 
 ## Contributors
 - Please send pull requests and add yourself to CONTRIBUTORS.md
-
