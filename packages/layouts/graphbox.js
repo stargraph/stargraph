@@ -48,7 +48,9 @@ function addNewNodeBinding( cy ){
             tags:[]
         });
     } else {
-      Network.remove( event.cyTarget.id() );
+      //Network.remove( event.cyTarget.id() );
+      Session.set("selected_node",event.cyTarget.id());
+      Session.set('selected_node_modal', true);
     }
   } );
 }

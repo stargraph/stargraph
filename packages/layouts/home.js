@@ -4,6 +4,9 @@ Template.home.helpers({
     },
     'public':function(){
         return Graphs.find({public:true, ownerId:{$nin:[Meteor.userId()]}});
+    },
+    'hasItems':function(){
+        return this.length > 0;
     }
 });
 Template.home.events({

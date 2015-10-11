@@ -1,30 +1,34 @@
 <template name="datamanage">
-    <div class="info-well well">
-        <a href="#" id="closeDataManage" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-        {{> metadata}}
-        {{> annotations}}
-        {{> tags}}
-        {{> comments}}
-    </div>
+    {{#if selectedNodeModal}}
+        <div class="info-well well">
+                <a href="#" id="closeDataManage" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+            {{#with selectedNode}}
+                {{> metadata}}
+                {{> annotations}}
+                {{> tags}}
+                {{> comments}}
+            {{/with}}
+        </div>
+    {{/if}}
 </template>
 
 <template name="metadata">
-    <h2>This will be metadata</h2>
+    <div class="inline-form-font" data-field="title">{{>xEditable type='text' value=title showbuttons=false emptytext=defaultTitle success=onEditSuccess mode='inline' placement="bottom"}}</div>
+    <div class="inline-form-font" data-field="body">{{>xEditable type='textarea' showbuttons=false value=body success=onEditSuccess mode='inline' placement="bottom"}}</div>
 </template>
 
 <template name="annotations">
-    <h2>This will be annotations</h2>
+
 </template>
 
 <template name="tags">
-    <h2>This will be tags</h2>
+
 </template>
 
 <template name="comments">
     {{> newComment}} <br />
-    <h2>this will be comments</h2>
 </template>
 
 <template name="newComment">
-    <h2>this will be where new comment form is</h2>
+
 </template>
