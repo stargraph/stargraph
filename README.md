@@ -23,7 +23,7 @@ We will put up shortly on [Stargraph.xyz](http://stargraph.xyz)
 ## User Feedback / Feature Requests / Planning
 - To see brainstorming/scratchpad, visit this [Hackpad](https://hackpad.com/IuJZ25PTfaT).
 - For input, visit the: [Trello board](https://trello.com/b/GmRn0fEg/stargraph-development).
-- Provide detailed bug reports by searching and filing issues on [Github](https://github.com/Soupala/Stargraph/issues).
+- Provide detailed bug reports by searching and filing issues on [Github](https://github.com/stargraph/stargraph/issues).
 
 ## Help Wanted
 - Early alpha users to help populate some example graphs for public demos.
