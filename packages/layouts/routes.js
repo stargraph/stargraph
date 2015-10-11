@@ -15,7 +15,7 @@ Router.route('/', {
 Router.route('/graph/:_id', {
   'layoutTemplate': 'layout',
   'name': 'main',
-  'waitOn':function(){
+  'subscriptions':function(){
     var graphId = this.params._id;
     return Meteor.subscribe('graph', graphId);
   },

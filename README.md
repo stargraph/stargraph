@@ -27,7 +27,7 @@ Stargraph is a real-time, collaborative graph editor.
 
 ## Help Wanted
 - Some early alpha users to help populate some example graphs for public demos.
-- Stargraph uses the CytoscapeJS library.
+- Stargraph utilizes the CytoscapeJS library.
 - Spread the word about Stargraph. Follow on Github, [@Soupala](https://twitter.com/soupala) on Twitter, and like on [Facebook](https://www.facebook.com/stargraph.xyz).
 - Create your own tutorial on how to create a model with Stargraph and post to your site or blog.
 

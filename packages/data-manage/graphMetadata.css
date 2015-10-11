@@ -1,0 +1,7 @@
+.graph-metadata-well {
+    width:100%;
+    height:100%;
+    visibility: hidden;
+    position: relative;
+    z-index: 1996;
+}
