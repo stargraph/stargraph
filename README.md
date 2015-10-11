@@ -10,8 +10,9 @@ Stargraph is a real-time, collaborative graph editor written in Meteor with the 
 ## Installation
 ```
 1. Install Meteor from https://www.meteor.com/install
-2. $ cd stargraph
-3. $ meteor
+2. Choose the 'semi-stable' branch from the dropdown above, or check out that remote branch from your terminal.
+3. $ cd stargraph
+4. $ meteor
 ```
 ## Description and Goals
 1. Stargraph Alpha was developed during a 24-hour period for the 2015 Meteor Global Distributed Hackathon by Joshua Chavez (@program3r), Mica Cardillo (@Soupala), and Max Franz (@maxkfranz).
