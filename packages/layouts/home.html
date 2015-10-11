@@ -6,7 +6,7 @@
     			{{#each graphs}}
     			  {{>graph}}
     			{{/each}}
-					{{#if graphs.length}}
+					{{#if hasItems graphs}}
     			{{else}}
 						No graphs yet
     			{{/if}}
@@ -21,7 +21,7 @@
     			{{#each public}}
     			  {{>graphPublic}}
     			{{/each}}
-					{{#if graphs.length}}
+					{{#if hasItems public}}
     			{{else}}
 						No graphs yet
     			{{/if}}
@@ -30,7 +30,7 @@
 </template>
 <template name="graph">
   <h4><a href="{{pathFor 'main'}}">{{#if title}}{{title}}{{else}}Untitled - {{_id}}{{/if}}</a>
-  <a href="{{pathFor 'main'}}" class="btn btn-default editGraph"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+  <!--<a href="{{pathFor 'main'}}" class="btn btn-default editGraph"><i class="glyphicon glyphicon-pencil"></i> Edit</a>-->
   <button class="btn makePublic {{#if public}}btn-danger{{else}}btn-success{{/if}}"><i class="glyphicon {{#if public}}glyphicon-eye-close{{else}}glyphicon-eye-open{{/if}}"></i> Make {{#if public}}private{{else}}public{{/if}}</button>
   <button class="btn btn-danger deleteGraph"><i class="glyphicon glyphicon-remove"></i></button>
   </h4>

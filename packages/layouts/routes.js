@@ -23,6 +23,8 @@ Router.route('/graph/:_id', {
 });
 
 
+// catchall route ... need template for it
+
 /*Router.route("/graph/(.*)", function() {
     this.render('notfoundGraph');
     this.next();

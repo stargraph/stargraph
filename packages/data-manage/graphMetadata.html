@@ -1,6 +1,10 @@
 <template name="graphMetadata">
     <div class="graph-metadata-well well">
-        <a href="#" id="closeGraphMetadata" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-        Put the form for Graph Metadata in here.
+            {{#with selectedGraph}}
+                <a href="#" id="closeDataManage" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <div class="inline-form-font" data-field="title">{{>xEditable type='text' value=title defaultValue=defaultTitle success=onEditSuccess mode='inline' placement="bottom"}}</div>
+                <div class="inline-form-font" data-field="body">{{>xEditable type='textarea' value=body success=onEditSuccess mode='inline' placement="bottom"}}</div>
+            {{/with}}
+        
     </div>
 </template>

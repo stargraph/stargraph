@@ -12,8 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['twbs:bootstrap@3.3.5','fortawesome:fontawesome@4.4.0','templating','jquery']);
-  api.addFiles(['datamanage.html','datamanage.js','datamanage.css'],'client');
+  api.use(['twbs:bootstrap@3.3.5','natestrauser:x-editable-bootstrap','workman:x-editable-reactive-template','session','fortawesome:fontawesome@4.4.0','templating','jquery','sg:pub-sec']);
+  api.addFiles(['datamanage.html','datamanage.js','datamanage.css','graphMetadata.html','graphMetadata.css','graphMetadata.js'],'client');
 });
 
 Package.onTest(function(api) {
