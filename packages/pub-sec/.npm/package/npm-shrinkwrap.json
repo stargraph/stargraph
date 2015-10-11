@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "node-json-csv": {
+      "version": "1.1.0"
+    }
+  }
+}
