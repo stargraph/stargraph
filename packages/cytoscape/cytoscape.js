@@ -10,6 +10,11 @@ Template.Cytoscape.rendered = function() {
         }
     });
     self.graph = cytoscape(mergedOptions);
+    self.graph.edgehandles({
+        complete:function(source, target, addedItems){
+            self.blazeData.collection.insert({group:'edges',data:{source:source.id(), target:target.id()}, graphId:Router.current().params._id});
+        }
+    })
     self.fieldFunctionMap = {
         'data':function(elem, data){
             elem.data(data);
@@ -22,8 +27,8 @@ Template.Cytoscape.rendered = function() {
         'added':function(id, fields){
             fields.data = fields.data || {};
             fields.data.id = id;
-            self.graph.add(fields).on("vmouseup", function(event){
-                self.blazeData.collection.update(id, {$set:{position:event.cyPosition}});
+            self.graph.add(fields).on("free", function(event){
+                self.blazeData.collection.update(id, {$set:{position:event.cyTarget.position()}});
             });
         },
         'changed':function(id, fields){
