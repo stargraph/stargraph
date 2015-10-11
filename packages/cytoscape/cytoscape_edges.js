@@ -442,6 +442,7 @@
                   position: p
                 }, options().nodeParams(source, target) )).addClass(classes);
 
+                
                 var source2inter = cy.add($.extend( true, {
                   group: 'edges',
                   data: {
@@ -457,13 +458,13 @@
                     target: target.id()
                   }
                 }, options().edgeParams(source, target, 1) )).addClass(classes);
-
+                
                 added = added.add( interNode ).add( source2inter ).add( inter2target );
 
                 break;
 
               case 'flat':
-                var edge = cy.add($.extend( true, {
+                /*var edge = cy.add($.extend( true, {
                   group: 'edges',
                   data: {
                     source: source.id(),
@@ -471,7 +472,7 @@
                   }
                 }, options().edgeParams(source, target, 0) )).addClass(classes);
 
-                added = added.add( edge );
+                added = added.add( edge );*/
 
                 break;
 
