@@ -12,10 +12,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use('mongo');
+  api.use(['mongo','http']);
   api.addFiles('collections.js');
   api.addFiles(['publications.js','security.js'],'server');
   api.export(['Graphs', 'Network']);
+  Npm.depends({
+    "node-json-csv":"1.1.0"
+  });
 });
 
 Package.onTest(function(api) {

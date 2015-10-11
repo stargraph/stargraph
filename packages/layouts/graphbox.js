@@ -1,8 +1,8 @@
 function nodeSortValue( node ) {
-  return randomNodeSortValue( node );
+  //return randomNodeSortValue( node );
 
   // TODO replace with desired ranking value, on 0 <= val <= 100
-  // return node.data('value');
+   return node.data('weight');
 };
 
 // for testing
