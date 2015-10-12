@@ -5,7 +5,7 @@ Template.datamanage.events = {
         Session.set('selected_graph_modal', false);
     }
 };
-Template.graphMeta.helpers({
+Template.graphMetadata.helpers({
     'selectedGraph': function() {
         return Network.findOne(Session.get('selected_node')) || {};
     },
